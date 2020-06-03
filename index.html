@@ -18,8 +18,8 @@
       vr-mode-ui="enabled: true"
     >
       <!-- Preloading assets -->
-      <a-assets
-        ><a-mixin
+      <a-assets>
+        <a-mixin
           id="cube"
           geometry="primitive: box; width: 0.5; height: 0.5; depth: 0.5"
           hoverable
@@ -33,9 +33,34 @@
           event-set__hoveroff="_event: hover-end; material.opacity: 1; transparent: false"
           event-set__dragon="_event: dragover-start; material.wireframe: true"
           event-set__dragoff="_event: dragover-end; material.wireframe: false"
+        ></a-mixin>
+        <a-mixin
+          id="bun-bt"
+          obj-model="obj: #borgor-bt-obj; mtl: #borgor-bt-mtl;"
+          hoverable
+          grabbable
+          stretchable
+          draggable
+          droppable
+          shadow
+          event-set__dragdrop="_event: drag-drop; geometry.radius: 0.25; geometry.primitive: sphere"
+          event-set__hoveron="_event: hover-start; material.opacity: 0.7; transparent: true"
+          event-set__hoveroff="_event: hover-end; material.opacity: 1; transparent: false"
+          event-set__dragon="_event: dragover-start; material.wireframe: true"
+          event-set__dragoff="_event: dragover-end; material.wireframe: false"
         >
-        </a-mixin
-      ></a-assets>
+        </a-mixin>
+        <a-asset-item id="walls-obj" src="models\Walls.obj"></a-asset-item>
+        <a-asset-item
+          id="borgor-bt-obj"
+          src="models\BorgorBottom.obj"
+        ></a-asset-item>
+        <a-asset-item
+          id="borgor-bt-mtl"
+          src="models\BorgorBottom.mtl"
+        ></a-asset-item>
+        <img id="walls-png" src="textures/Walls_A.png" />
+      </a-assets>
 
       <!-- Player -->
       <a-entity
@@ -58,8 +83,7 @@
           geometry="primitive: circle; radius: 0.01; segments: 4;"
           material="color: #FF4444; shader: flat"
         ></a-entity -->
-        ></a-entity
-      >
+      </a-entity>
 
       <!-- Vr controlls -->
       <a-entity
@@ -86,82 +110,37 @@
         color="#74b0a5"
       ></a-box>
 
-      <!-- Pushable boxes -->
-      <!-- <a-box
-        position="0 2 -2"
-        color="#a50026"
-        dynamic-body
-        force-pushable
-      ></a-box>
-      <a-box
-        position="1 2 -2"
-        color="#d73027"
-        dynamic-body
-        force-pushable
-      ></a-box>
-      <a-box
-        position="2 2 -2"
-        color="#f46d43"
-        dynamic-body
-        force-pushable
-      ></a-box>
-      <a-box
-        position="3 2 -2"
-        color="#fdae61"
-        dynamic-body
-        force-pushable
-      ></a-box> -->
-      <a-entity
+      <!-- Movable boxes -->
+      <!-- <a-entity
         class="cube"
         mixin="cube"
         position="0 1 -1.25"
         material="color: red"
         dynamic-body
-      ></a-entity>
+      ></a-entity> -->
+
+      <!-- Movable items -->
       <a-entity
         class="cube"
-        mixin="cube"
-        position="0 1.6 -1.5"
-        material="color: red"
-        dynamic-body
-      ></a-entity>
-      <a-entity
-        class="cube"
-        mixin="cube"
-        position="-0.9 1 -0.9"
-        material="color: blue"
-        dynamic-body
-      ></a-entity>
-      <a-entity
-        class="cube"
-        mixin="cube"
-        position="-1 1.6 -1"
-        material="color: blue"
-        dynamic-body
-      ></a-entity>
-      <a-entity
-        class="cube"
-        mixin="cube"
-        position="0.9 1 -0.9"
-        material="color: green"
-        dynamic-body
-      ></a-entity>
-      <a-entity
-        class="cube"
-        mixin="cube"
-        position="1 1.6 -1"
-        material="color: green"
+        mixin="bun-bt"
+        position="1 2 -1"
+        scale="0.2 0.2 0.2"
         dynamic-body
       ></a-entity>
 
-      <!-- Table -->
-      <a-box
+      <!-- Kitchen Scene -->
+      <!-- <a-box
         scale="5 0.1 3"
         material="color: #47250a"
         position="0 0.7 -2"
         static-body
         shadow
-      ></a-box>
+      ></a-box> -->
+      <a-obj-model
+        src="#walls-obj"
+        material="src: #walls-png; roughness: 1"
+        scale="0.2 0.2 0.2"
+      ></a-obj-model>
     </a-scene>
 
     <!-- Github corner -->
