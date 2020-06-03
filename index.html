@@ -8,7 +8,6 @@
     <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v2.1.0/dist/aframe-physics-system.min.js"></script>
     <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js"></script>
     <script src="https://unpkg.com/super-hands@3.0.0/dist/super-hands.min.js"></script>
-    <script src="components/force-pushable.js"></script>
   </head>
   <body>
     <a-scene
@@ -36,7 +35,183 @@
         ></a-mixin>
         <a-mixin
           id="bun-bt"
-          obj-model="obj: #borgor-bt-obj; mtl: #borgor-bt-mtl;"
+          obj-model="obj: #bun-bt-obj"
+          hoverable
+          grabbable
+          stretchable
+          draggable
+          droppable
+          shadow
+          event-set__dragdrop="_event: drag-drop; geometry.radius: 0.25; geometry.primitive: sphere"
+          event-set__hoveron="_event: hover-start; material.opacity: 0.7; transparent: true"
+          event-set__hoveroff="_event: hover-end; material.opacity: 1; transparent: false"
+          event-set__dragon="_event: dragover-start; material.wireframe: true"
+          event-set__dragoff="_event: dragover-end; material.wireframe: false"
+        >
+        </a-mixin>
+        <a-mixin
+          id="bun-tp"
+          obj-model="obj: #bun-tp-obj"
+          hoverable
+          grabbable
+          stretchable
+          draggable
+          droppable
+          shadow
+          event-set__dragdrop="_event: drag-drop; geometry.radius: 0.25; geometry.primitive: sphere"
+          event-set__hoveron="_event: hover-start; material.opacity: 0.7; transparent: true"
+          event-set__hoveroff="_event: hover-end; material.opacity: 1; transparent: false"
+          event-set__dragon="_event: dragover-start; material.wireframe: true"
+          event-set__dragoff="_event: dragover-end; material.wireframe: false"
+        >
+        </a-mixin>
+        <a-mixin
+          id="bun-md"
+          obj-model="obj: #bun-md-obj"
+          hoverable
+          grabbable
+          stretchable
+          draggable
+          droppable
+          shadow
+          event-set__dragdrop="_event: drag-drop; geometry.radius: 0.25; geometry.primitive: sphere"
+          event-set__hoveron="_event: hover-start; material.opacity: 0.7; transparent: true"
+          event-set__hoveroff="_event: hover-end; material.opacity: 1; transparent: false"
+          event-set__dragon="_event: dragover-start; material.wireframe: true"
+          event-set__dragoff="_event: dragover-end; material.wireframe: false"
+        >
+        </a-mixin>
+        <a-mixin
+          id="bagel"
+          obj-model="obj: #bagel-obj"
+          hoverable
+          grabbable
+          stretchable
+          draggable
+          droppable
+          shadow
+          event-set__dragdrop="_event: drag-drop; geometry.radius: 0.25; geometry.primitive: sphere"
+          event-set__hoveron="_event: hover-start; material.opacity: 0.7; transparent: true"
+          event-set__hoveroff="_event: hover-end; material.opacity: 1; transparent: false"
+          event-set__dragon="_event: dragover-start; material.wireframe: true"
+          event-set__dragoff="_event: dragover-end; material.wireframe: false"
+        >
+        </a-mixin>
+        <a-mixin
+          id="bacon"
+          obj-model="obj: #bacon-obj"
+          hoverable
+          grabbable
+          stretchable
+          draggable
+          droppable
+          shadow
+          event-set__dragdrop="_event: drag-drop; geometry.radius: 0.25; geometry.primitive: sphere"
+          event-set__hoveron="_event: hover-start; material.opacity: 0.7; transparent: true"
+          event-set__hoveroff="_event: hover-end; material.opacity: 1; transparent: false"
+          event-set__dragon="_event: dragover-start; material.wireframe: true"
+          event-set__dragoff="_event: dragover-end; material.wireframe: false"
+        >
+        </a-mixin>
+        <a-mixin
+          id="cheese"
+          obj-model="obj: #cheese-obj"
+          hoverable
+          grabbable
+          stretchable
+          draggable
+          droppable
+          shadow
+          event-set__dragdrop="_event: drag-drop; geometry.radius: 0.25; geometry.primitive: sphere"
+          event-set__hoveron="_event: hover-start; material.opacity: 0.7; transparent: true"
+          event-set__hoveroff="_event: hover-end; material.opacity: 1; transparent: false"
+          event-set__dragon="_event: dragover-start; material.wireframe: true"
+          event-set__dragoff="_event: dragover-end; material.wireframe: false"
+        >
+        </a-mixin>
+        <a-mixin
+          id="cucumba"
+          obj-model="obj: #cucumba-obj"
+          hoverable
+          grabbable
+          stretchable
+          draggable
+          droppable
+          shadow
+          event-set__dragdrop="_event: drag-drop; geometry.radius: 0.25; geometry.primitive: sphere"
+          event-set__hoveron="_event: hover-start; material.opacity: 0.7; transparent: true"
+          event-set__hoveroff="_event: hover-end; material.opacity: 1; transparent: false"
+          event-set__dragon="_event: dragover-start; material.wireframe: true"
+          event-set__dragoff="_event: dragover-end; material.wireframe: false"
+        >
+        </a-mixin>
+        <a-mixin
+          id="egg"
+          obj-model="obj: #egg-obj"
+          hoverable
+          grabbable
+          stretchable
+          draggable
+          droppable
+          shadow
+          event-set__dragdrop="_event: drag-drop; geometry.radius: 0.25; geometry.primitive: sphere"
+          event-set__hoveron="_event: hover-start; material.opacity: 0.7; transparent: true"
+          event-set__hoveroff="_event: hover-end; material.opacity: 1; transparent: false"
+          event-set__dragon="_event: dragover-start; material.wireframe: true"
+          event-set__dragoff="_event: dragover-end; material.wireframe: false"
+        >
+        </a-mixin>
+        <a-mixin
+          id="onion"
+          obj-model="obj: #onion-obj"
+          hoverable
+          grabbable
+          stretchable
+          draggable
+          droppable
+          shadow
+          event-set__dragdrop="_event: drag-drop; geometry.radius: 0.25; geometry.primitive: sphere"
+          event-set__hoveron="_event: hover-start; material.opacity: 0.7; transparent: true"
+          event-set__hoveroff="_event: hover-end; material.opacity: 1; transparent: false"
+          event-set__dragon="_event: dragover-start; material.wireframe: true"
+          event-set__dragoff="_event: dragover-end; material.wireframe: false"
+        >
+        </a-mixin>
+        <a-mixin
+          id="patty"
+          obj-model="obj: #patty-obj"
+          hoverable
+          grabbable
+          stretchable
+          draggable
+          droppable
+          shadow
+          event-set__dragdrop="_event: drag-drop; geometry.radius: 0.25; geometry.primitive: sphere"
+          event-set__hoveron="_event: hover-start; material.opacity: 0.7; transparent: true"
+          event-set__hoveroff="_event: hover-end; material.opacity: 1; transparent: false"
+          event-set__dragon="_event: dragover-start; material.wireframe: true"
+          event-set__dragoff="_event: dragover-end; material.wireframe: false"
+        >
+        </a-mixin>
+        <a-mixin
+          id="sallad"
+          obj-model="obj: #sallad-obj"
+          hoverable
+          grabbable
+          stretchable
+          draggable
+          droppable
+          shadow
+          event-set__dragdrop="_event: drag-drop; geometry.radius: 0.25; geometry.primitive: sphere"
+          event-set__hoveron="_event: hover-start; material.opacity: 0.7; transparent: true"
+          event-set__hoveroff="_event: hover-end; material.opacity: 1; transparent: false"
+          event-set__dragon="_event: dragover-start; material.wireframe: true"
+          event-set__dragoff="_event: dragover-end; material.wireframe: false"
+        >
+        </a-mixin>
+        <a-mixin
+          id="tomato"
+          obj-model="obj: #tomato-obj"
           hoverable
           grabbable
           stretchable
@@ -51,15 +226,28 @@
         >
         </a-mixin>
         <a-asset-item id="walls-obj" src="models\Walls.obj"></a-asset-item>
-        <a-asset-item
-          id="borgor-bt-obj"
-          src="models\BorgorBottom.obj"
-        ></a-asset-item>
-        <a-asset-item
-          id="borgor-bt-mtl"
-          src="models\BorgorBottom.mtl"
-        ></a-asset-item>
+        <a-asset-item id="bun-bt-obj" src="models\BunBt.obj"></a-asset-item>
+        <a-asset-item id="bun-tp-obj" src="models\BunTp.obj"></a-asset-item>
+        <a-asset-item id="bun-md-obj" src="models\BunMd.obj"></a-asset-item>
+        <a-asset-item id="bagel-obj" src="models\Bagel.obj"></a-asset-item>
+        <a-asset-item id="bacon-obj" src="models\Bacon.obj"></a-asset-item>
+        <a-asset-item id="cheese-obj" src="models\Cheese.obj"></a-asset-item>
+        <a-asset-item id="cucumba-obj" src="models\Cucumba.obj"></a-asset-item>
+        <a-asset-item id="egg-obj" src="models\Egg.obj"></a-asset-item>
+        <a-asset-item id="onion-obj" src="models\Onion.obj"></a-asset-item>
+        <a-asset-item id="patty-obj" src="models\Patty.obj"></a-asset-item>
+        <a-asset-item id="sallad-obj" src="models\Sallad.obj"></a-asset-item>
+        <a-asset-item id="tomato-obj" src="models\Tomato.obj"></a-asset-item>
         <img id="walls-png" src="textures/Walls_A.png" />
+        <img id="bun-png" src="textures\Bun.png" />
+        <img id="bacon-png" src="textures\Bacon.png" />
+        <img id="cheese-png" src="textures\Cheese.png" />
+        <img id="cucumba-png" src="textures\Cucumba.png" />
+        <img id="egg-png" src="textures\Egg.png" />
+        <img id="onion-png" src="textures\Onion.png" />
+        <img id="patty-png" src="textures\Patty.png" />
+        <img id="sallad-png" src="textures\Sallad.png" />
+        <img id="tomato-png" src="textures\Tomato.png" />
       </a-assets>
 
       <!-- Player -->
@@ -67,7 +255,7 @@
         camera
         look-controls
         wasd-controls
-        position="0 1.6 0"
+        position="0 1.6 3"
         capture-mouse
         raycaster="objects: .cube"
         cursor="rayOrigin:mouse"
@@ -92,12 +280,12 @@
 
       <!-- Lights -->
       <a-entity
-        position="1.5 3 2"
-        light="color: #fafdd3; intensity: 2; castShadow: true"
+        position="0.5 4.5 3"
+        light="color: #fafdd3; intensity: 1; castShadow: true"
         id="dirLight"
       ></a-entity>
       <a-entity
-        light="color: #d1c7f5; intensity: 0.5; type: ambient"
+        light="color: #d1c7f5; intensity: 0.7; type: ambient"
         id="ambLight"
       ></a-entity>
 
@@ -123,9 +311,92 @@
       <a-entity
         class="cube"
         mixin="bun-bt"
-        position="1 2 -1"
+        position="1.253 1.4 1.262"
         scale="0.2 0.2 0.2"
+        material="src: #bun-png;"
         dynamic-body
+        shadow
+      ></a-entity>
+      <a-entity
+        class="cube"
+        mixin="bun-tp"
+        position="1.028 1.4 1.871"
+        scale="0.2 0.2 0.2"
+        material="src: #bun-png;"
+        dynamic-body
+        shadow
+      ></a-entity>
+      <a-entity
+        class="cube"
+        mixin="bun-md"
+        position="0.841 1.4 1.339"
+        scale="0.2 0.2 0.2"
+        material="src: #bun-png;"
+        dynamic-body
+        shadow
+      ></a-entity>
+      <a-entity
+        class="cube"
+        mixin="bacon"
+        position="0.4 1.4 1.5"
+        scale="0.2 0.2 0.2"
+        material="src: #bacon-png;"
+        dynamic-body
+        shadow
+      ></a-entity>
+      <a-entity
+        class="cube"
+        mixin="bacon"
+        position="0.4 1.4 1.7"
+        scale="0.2 0.2 0.2"
+        material="src: #bacon-png;"
+        dynamic-body
+        shadow
+      ></a-entity>
+      <a-entity
+        class="cube"
+        mixin="bagel"
+        position="0.3 1.4 1.2"
+        scale="0.2 0.2 0.2"
+        material="src: #bun-png;"
+        dynamic-body
+        shadow
+      ></a-entity>
+      <a-entity
+        class="cube"
+        mixin="bagel"
+        position="-0.133 1.4 1.1273"
+        scale="0.2 0.2 0.2"
+        material="src: #bun-png;"
+        dynamic-body
+        shadow
+      ></a-entity>
+      <a-entity
+        class="cube"
+        mixin="cheese"
+        position="-0.133 1.4 1.1273"
+        scale="0.2 0.2 0.2"
+        material="src: #cheese-png;"
+        dynamic-body
+        shadow
+      ></a-entity>
+      <a-entity
+        class="cube"
+        mixin="cheese"
+        position="-0.133 1.4 1.5"
+        scale="0.2 0.2 0.2"
+        material="src: #cheese-png;"
+        dynamic-body
+        shadow
+      ></a-entity>
+      <a-entity
+        class="cube"
+        mixin="cheese"
+        position="-0.173 1.4 1.5"
+        scale="0.2 0.2 0.2"
+        material="src: #cheese-png;"
+        dynamic-body
+        shadow
       ></a-entity>
 
       <!-- Kitchen Scene -->
@@ -136,11 +407,34 @@
         static-body
         shadow
       ></a-box> -->
-      <a-obj-model
+      <!-- <a-obj-model
         src="#walls-obj"
         material="src: #walls-png; roughness: 1"
         scale="0.2 0.2 0.2"
-      ></a-obj-model>
+      ></a-obj-model> -->
+      <!-- <a-gltf-model
+        src="models\Kitchen.gltf "
+        scale="0.2 0.2 0.2"
+      ></a-gltf-model> -->
+      <a-gltf-model
+        src="models\Counter.gltf "
+        scale="0.2 0.2 0.2"
+        static-body
+      ></a-gltf-model>
+      <a-gltf-model
+        src="models\CounterUnder.gltf "
+        scale="0.2 0.2 0.2"
+      ></a-gltf-model>
+      <a-gltf-model
+        src="models\StoveCounter.gltf "
+        scale="0.2 0.2 0.2"
+        static-body
+      ></a-gltf-model>
+      <a-gltf-model
+        src="models\Fridge.gltf "
+        scale="0.2 0.2 0.2"
+        static-body
+      ></a-gltf-model>
     </a-scene>
 
     <!-- Github corner -->
