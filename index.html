@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FKING Sandwich</title>
+    <title>Impossible Borgor</title>
     <script src="https://unpkg.com/aframe@latest"></script>
     <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v2.1.0/dist/aframe-physics-system.min.js"></script>
     <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js"></script>
@@ -124,21 +124,6 @@
         >
         </a-mixin>
         <a-mixin
-          id="cucumba"
-          obj-model="obj: #cucumba-obj"
-          hoverable
-          grabbable
-          stretchable
-          draggable
-          droppable
-          event-set__dragdrop="_event: drag-drop; geometry.radius: 0.25; geometry.primitive: sphere"
-          event-set__hoveron="_event: hover-start; material.opacity: 0.7; transparent: true"
-          event-set__hoveroff="_event: hover-end; material.opacity: 1; transparent: false"
-          event-set__dragon="_event: dragover-start; material.wireframe: true"
-          event-set__dragoff="_event: dragover-end; material.wireframe: false"
-        >
-        </a-mixin>
-        <a-mixin
           id="egg"
           obj-model="obj: #egg-obj"
           hoverable
@@ -228,25 +213,21 @@
           event-set__dragoff="_event: dragover-end; material.wireframe: false"
         >
         </a-mixin>
-        <a-asset-item id="walls-obj" src="models\Walls.obj"></a-asset-item>
         <a-asset-item id="bun-bt-obj" src="models\BunBt.obj"></a-asset-item>
         <a-asset-item id="bun-tp-obj" src="models\BunTp.obj"></a-asset-item>
         <a-asset-item id="bun-md-obj" src="models\BunMd.obj"></a-asset-item>
         <a-asset-item id="bagel-obj" src="models\Bagel.obj"></a-asset-item>
         <a-asset-item id="bacon-obj" src="models\Bacon.obj"></a-asset-item>
         <a-asset-item id="cheese-obj" src="models\Cheese.obj"></a-asset-item>
-        <a-asset-item id="cucumba-obj" src="models\Cucumba.obj"></a-asset-item>
         <a-asset-item id="egg-obj" src="models\Egg.obj"></a-asset-item>
         <a-asset-item id="onion-obj" src="models\Onion.obj"></a-asset-item>
         <a-asset-item id="patty-obj" src="models\Patty.obj"></a-asset-item>
         <a-asset-item id="sallad-obj" src="models\Sallad.obj"></a-asset-item>
         <a-asset-item id="tomato-obj" src="models\Tomato.obj"></a-asset-item>
         <a-asset-item id="plate-obj" src="models\Plate.obj"></a-asset-item>
-        <img id="walls-png" src="textures/Walls_A.png" />
         <img id="bun-png" src="textures\Bun.png" />
         <img id="bacon-png" src="textures\Bacon.png" />
         <img id="cheese-png" src="textures\Cheese.png" />
-        <img id="cucumba-png" src="textures\Cucumba.png" />
         <img id="egg-png" src="textures\Egg.png" />
         <img id="onion-png" src="textures\Onion.png" />
         <img id="patty-png" src="textures\Patty.png" />
