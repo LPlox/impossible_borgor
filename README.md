@@ -3,3 +3,5 @@
 # Impossible borgor
 
 A VR game where you make a borgor. Try! It's really not easy! 
+
+![Image of Borgor](https://github.com/LPlox/impossible_borgor/blob/master/img/borgor.png)
