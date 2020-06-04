@@ -12,9 +12,10 @@
   <body>
     <a-scene
       stats="true"
-      shadow="autoUpdate:true; type:pcfsoft"
-      background="#e8e8e8"
+      ="autoUpdate:true; type:pcfsoft"
+      background="color: #ffd9fd"
       vr-mode-ui="enabled: true"
+      loading-screen="backgroundColor: #ffd9fd; dotsColor: white; "
     >
       <!-- Preloading assets -->
       <a-assets>
@@ -26,7 +27,6 @@
           stretchable
           draggable
           droppable
-          shadow
           event-set__dragdrop="_event: drag-drop; geometry.radius: 0.25; geometry.primitive: sphere"
           event-set__hoveron="_event: hover-start; material.opacity: 0.7; transparent: true"
           event-set__hoveroff="_event: hover-end; material.opacity: 1; transparent: false"
@@ -41,7 +41,6 @@
           stretchable
           draggable
           droppable
-          shadow
           event-set__dragdrop="_event: drag-drop; geometry.radius: 0.25; geometry.primitive: sphere"
           event-set__hoveron="_event: hover-start; material.opacity: 0.7; transparent: true"
           event-set__hoveroff="_event: hover-end; material.opacity: 1; transparent: false"
@@ -57,7 +56,6 @@
           stretchable
           draggable
           droppable
-          shadow
           event-set__dragdrop="_event: drag-drop; geometry.radius: 0.25; geometry.primitive: sphere"
           event-set__hoveron="_event: hover-start; material.opacity: 0.7; transparent: true"
           event-set__hoveroff="_event: hover-end; material.opacity: 1; transparent: false"
@@ -73,7 +71,6 @@
           stretchable
           draggable
           droppable
-          shadow
           event-set__dragdrop="_event: drag-drop; geometry.radius: 0.25; geometry.primitive: sphere"
           event-set__hoveron="_event: hover-start; material.opacity: 0.7; transparent: true"
           event-set__hoveroff="_event: hover-end; material.opacity: 1; transparent: false"
@@ -89,7 +86,6 @@
           stretchable
           draggable
           droppable
-          shadow
           event-set__dragdrop="_event: drag-drop; geometry.radius: 0.25; geometry.primitive: sphere"
           event-set__hoveron="_event: hover-start; material.opacity: 0.7; transparent: true"
           event-set__hoveroff="_event: hover-end; material.opacity: 1; transparent: false"
@@ -105,7 +101,6 @@
           stretchable
           draggable
           droppable
-          shadow
           event-set__dragdrop="_event: drag-drop; geometry.radius: 0.25; geometry.primitive: sphere"
           event-set__hoveron="_event: hover-start; material.opacity: 0.7; transparent: true"
           event-set__hoveroff="_event: hover-end; material.opacity: 1; transparent: false"
@@ -121,7 +116,6 @@
           stretchable
           draggable
           droppable
-          shadow
           event-set__dragdrop="_event: drag-drop; geometry.radius: 0.25; geometry.primitive: sphere"
           event-set__hoveron="_event: hover-start; material.opacity: 0.7; transparent: true"
           event-set__hoveroff="_event: hover-end; material.opacity: 1; transparent: false"
@@ -137,7 +131,6 @@
           stretchable
           draggable
           droppable
-          shadow
           event-set__dragdrop="_event: drag-drop; geometry.radius: 0.25; geometry.primitive: sphere"
           event-set__hoveron="_event: hover-start; material.opacity: 0.7; transparent: true"
           event-set__hoveroff="_event: hover-end; material.opacity: 1; transparent: false"
@@ -153,7 +146,6 @@
           stretchable
           draggable
           droppable
-          shadow
           event-set__dragdrop="_event: drag-drop; geometry.radius: 0.25; geometry.primitive: sphere"
           event-set__hoveron="_event: hover-start; material.opacity: 0.7; transparent: true"
           event-set__hoveroff="_event: hover-end; material.opacity: 1; transparent: false"
@@ -169,7 +161,6 @@
           stretchable
           draggable
           droppable
-          shadow
           event-set__dragdrop="_event: drag-drop; geometry.radius: 0.25; geometry.primitive: sphere"
           event-set__hoveron="_event: hover-start; material.opacity: 0.7; transparent: true"
           event-set__hoveroff="_event: hover-end; material.opacity: 1; transparent: false"
@@ -185,7 +176,6 @@
           stretchable
           draggable
           droppable
-          shadow
           event-set__dragdrop="_event: drag-drop; geometry.radius: 0.25; geometry.primitive: sphere"
           event-set__hoveron="_event: hover-start; material.opacity: 0.7; transparent: true"
           event-set__hoveroff="_event: hover-end; material.opacity: 1; transparent: false"
@@ -201,7 +191,6 @@
           stretchable
           draggable
           droppable
-          shadow
           event-set__dragdrop="_event: drag-drop; geometry.radius: 0.25; geometry.primitive: sphere"
           event-set__hoveron="_event: hover-start; material.opacity: 0.7; transparent: true"
           event-set__hoveroff="_event: hover-end; material.opacity: 1; transparent: false"
@@ -217,7 +206,6 @@
           stretchable
           draggable
           droppable
-          shadow
           event-set__dragdrop="_event: drag-drop; geometry.radius: 0.25; geometry.primitive: sphere"
           event-set__hoveron="_event: hover-start; material.opacity: 0.7; transparent: true"
           event-set__hoveroff="_event: hover-end; material.opacity: 1; transparent: false"
@@ -233,7 +221,6 @@
           stretchable
           draggable
           droppable
-          shadow
           event-set__dragdrop="_event: drag-drop; geometry.radius: 0.25; geometry.primitive: sphere"
           event-set__hoveron="_event: hover-start; material.opacity: 0.7; transparent: true"
           event-set__hoveroff="_event: hover-end; material.opacity: 1; transparent: false"
@@ -283,12 +270,6 @@
                    colliderEndEvent:raycaster-intersection-cleared;
                    colliderEndEventProperty: clearedEls;"
       >
-        <!-- <a-entity
-          cursor
-          position="0 0 -0.5"
-          geometry="primitive: circle; radius: 0.01; segments: 4;"
-          material="color: #FF4444; shader: flat"
-        ></a-entity -->
       </a-entity>
 
       <!-- Vr controlls -->
@@ -299,227 +280,202 @@
       <!-- Lights -->
       <a-entity
         position="0.5 4.5 3"
-        light="color: #fafdd3; intensity: 1; castShadow: true"
+        light="color: #fafdd3; intensity: 0.2; cast: true"
         id="dirLight"
       ></a-entity>
       <a-entity
-        light="color: #d1c7f5; intensity: 0.7; type: ambient"
+        light="color: #d1c7f5; intensity: 1.2; type: ambient"
         id="ambLight"
       ></a-entity>
-
-      <!-- Terrain -->
-      <a-box
-        width="75"
-        height="0.1"
-        depth="75"
-        static-body
-        color="#74b0a5"
-      ></a-box>
-
-      <!-- Movable boxes -->
-      <!-- <a-entity
-        class="cube"
-        mixin="cube"
-        position="0 1 -1.25"
-        material="color: red"
-        dynamic-body
-      ></a-entity> -->
 
       <!-- Movable items -->
       <a-entity
         class="cube"
         mixin="bun-bt"
-        position="1.253 1.4 1.262"
+        position="0.802 1.3 2.019"
         scale="0.2 0.2 0.2"
         material="src: #bun-png;"
         dynamic-body
-        shadow
       ></a-entity>
       <a-entity
         class="cube"
         mixin="bun-tp"
-        position="1.028 1.4 1.871"
+        position="0.835 1.3 1.545"
         scale="0.2 0.2 0.2"
         material="src: #bun-png;"
         dynamic-body
-        shadow
       ></a-entity>
       <a-entity
         class="cube"
         mixin="bun-md"
-        position="0.841 1.4 1.339"
+        position="0.802 1.3 1.110"
         scale="0.2 0.2 0.2"
         material="src: #bun-png;"
         dynamic-body
-        shadow
       ></a-entity>
       <a-entity
         class="cube"
         mixin="bacon"
-        position="0.4 1.4 1.5"
+        position="0.310 1.3 1.5"
         scale="0.2 0.2 0.2"
         material="src: #bacon-png;"
         dynamic-body
-        shadow
       ></a-entity>
       <a-entity
         class="cube"
         mixin="bacon"
-        position="0.4 1.4 1.7"
+        position="0.308 1.3 1.331"
         scale="0.2 0.2 0.2"
         material="src: #bacon-png;"
         dynamic-body
-        shadow
       ></a-entity>
       <a-entity
         class="cube"
         mixin="bagel"
-        position="0.3 1.4 1.2"
+        position="1.256 1.3 1.539"
         scale="0.2 0.2 0.2"
         material="src: #bun-png;"
         dynamic-body
-        shadow
       ></a-entity>
       <a-entity
         class="cube"
         mixin="bagel"
-        position="-0.133 1.4 1.1273"
+        position="1.255 1.3 2.013"
         scale="0.2 0.2 0.2"
         material="src: #bun-png;"
         dynamic-body
-        shadow
       ></a-entity>
       <a-entity
         class="cube"
         mixin="cheese"
-        position="-0.133 1.4 1.1273"
+        position="-0.216 1.3 1.911"
         scale="0.2 0.2 0.2"
         material="src: #cheese-png;"
         dynamic-body
-        shadow
       ></a-entity>
       <a-entity
         class="cube"
         mixin="cheese"
-        position="-0.362 1.4 1.727"
+        position="-0.211 1.3 1.414"
         scale="0.2 0.2 0.2"
         material="src: #cheese-png;"
         dynamic-body
-        shadow
       ></a-entity>
       <a-entity
         class="cube"
         mixin="egg"
-        position="-0.9 1.4 1.5"
+        position="-0.707 1.3 1.452"
         scale="0.2 0.2 0.2"
         material="src: #egg-png;"
         dynamic-body
-        shadow
       ></a-entity>
       <a-entity
         class="cube"
         mixin="onion"
-        position="-0.598 1.4 1.256"
+        position="-0.809 1.3 1.808"
         scale="0.2 0.2 0.2"
         material="src: #onion-png;"
         dynamic-body
-        shadow
       ></a-entity>
       <a-entity
         class="cube"
         mixin="sallad"
-        position="-0.0027 1.43 1.889"
+        position="0.270 1.3 1.994"
         scale="0.2 0.2 0.2"
         material="src: #sallad-png;"
         dynamic-body
-        shadow
       ></a-entity>
       <a-entity
         class="cube"
         mixin="tomato"
-        position="0 1.4 1.515"
+        position="-0.641 1.3 2.136"
         scale="0.2 0.2 0.2"
         material="src: #tomato-png;"
         dynamic-body
-        shadow
       ></a-entity>
       <a-entity
         class="cube"
         mixin="tomato"
-        position="0 1.45 1.515"
+        position="-0.641 1.42 2.136"
         scale="0.2 0.2 0.2"
         material="src: #tomato-png;"
         dynamic-body
-        shadow
       ></a-entity>
       <a-entity
         class="cube"
         mixin="patty"
-        position="-1.115 1.4 1.802"
+        position="-1.096 1.3 2.231"
         scale="0.2 0.2 0.2"
         material="src: #patty-png;"
         dynamic-body
-        shadow
       ></a-entity>
       <a-entity
         class="cube"
         mixin="patty"
-        position="-1.115 1.45 1.802"
+        position="-1.098 1.3 1.484"
         scale="0.2 0.2 0.2"
         material="src: #patty-png;"
         dynamic-body
-        shadow
       ></a-entity>
       <a-entity
         class="cube"
         mixin="plate"
-        position="-0.975 1.4 -1.336"
+        position="-0.139 1.3 2.428"
         scale="0.2 0.2 0.2"
         material="src: #plate-png;"
         dynamic-body
       ></a-entity>
 
       <!-- Kitchen Scene -->
-      <!-- <a-box
-        scale="5 0.1 3"
-        material="color: #47250a"
-        position="0 0.7 -2"
-        static-body
-        shadow
-      ></a-box> -->
       <!-- <a-obj-model
         src="#walls-obj"
         material="src: #walls-png; roughness: 1"
         scale="0.2 0.2 0.2"
       ></a-obj-model> -->
-      <!-- <a-gltf-model
-        src="models\Kitchen.gltf "
-        scale="0.2 0.2 0.2"
-      ></a-gltf-model> -->
+      <a-box
+        width="6.5"
+        height="5"
+        depth="0.3"
+        position="0.039 2.051 -4.079"
+        color="#f0f0f0"
+        static-body
+      ></a-box>
+      <a-gltf-model
+        src="models\Table.gltf "
+        scale="0.175 0.2 0.2"
+        position="0 0 1.758"
+        rotation="0 90 0"
+        static-body
+      ></a-gltf-model>
       <a-gltf-model
         src="models\Counter.gltf "
         scale="0.2 0.2 0.2"
-        shadow="cast: false"
-        static-body="sphereRadius: NaN"
-        gltf-model="models\Counter.gltf"
+        position="0.660 0 -2.839"
+        rotation="0 -90 0"
+        static-body
       ></a-gltf-model>
       <a-gltf-model
-        src="models\CounterUnder.gltf "
+        src="models\Cabinet.gltf "
+        position="0.713 2.374 -2.776"
+        rotation="0 -90 0"
         scale="0.2 0.2 0.2"
-        shadow="receive: true"
-      ></a-gltf-model>
-      <a-gltf-model
-        src="models\StoveCounter.gltf "
-        scale="0.2 0.2 0.2"
-        shadow="receive: true"
         static-body
       ></a-gltf-model>
       <a-gltf-model
         src="models\Fridge.gltf "
         scale="0.2 0.2 0.2"
-        shadow="receive: true"
+        position="-1.824 0 -2.704"
+        rotation="0 -90 0"
         static-body
       ></a-gltf-model>
+      <!-- Terrain -->
+      <a-box
+        width="75"
+        height="0.1"
+        depth="75"
+        color="#bdffc1"
+        static-body
+      ></a-box>
     </a-scene>
 
     <!-- Github corner -->
